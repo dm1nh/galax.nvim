@@ -1,5 +1,4 @@
 ---@class PaletteColors
----@field accent ColorSpec
 local palette = {
   -- backgrounds
   ink0 = "#16161d",
@@ -17,9 +16,9 @@ local palette = {
   white4 = "#e7dba0",
   white5 = "#e4d794",
   -- comments and gutters
-  gray0 = "#383733",
-  gray1 = "#53524c",
-  gray2 = "#7e7d74",
+  gray0 = "#404641",
+  gray1 = "#686760",
+  gray2 = "#9a9991",
   -- red
   red_dark = "#430c12",
   red0 = "#db3a4d",
@@ -99,11 +98,10 @@ function M.setup(opts)
   end
 
   -- Add to and/or override palette_colors
-  local updated_palette_colors =
-    vim.tbl_extend("force", palette, { accent = palette[opts.accent] }, override_colors.palette or {})
+  local updated_palette_colors = vim.tbl_extend("force", palette, override_colors.palette or {})
 
   -- Generate the theme according to the updated palette colors
-  local theme_colors = require("galax.themes")[theme](updated_palette_colors)
+  local theme_colors = require("galax.themes")[theme](updated_palette_colors, opts.accent)
 
   -- Add to and/or override theme_colors
   local theme_overrides =

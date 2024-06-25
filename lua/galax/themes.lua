@@ -88,11 +88,12 @@
 
 return {
   ---@param palette PaletteColors
+  ---@param accent string
   ---@return ThemeColors
-  beige = function(palette)
+  beige = function(palette, accent)
     return {
       ui = {
-        accent = palette.accent,
+        accent = palette[accent],
 
         fg = palette.white1,
         fg_dim = palette.white0,

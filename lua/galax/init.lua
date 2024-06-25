@@ -71,7 +71,7 @@ function M.load(theme)
   else
     local colors = require("galax.colors").setup({ theme = theme, colors = M.config.colors, accent = M.config.accent })
     local highlights = require("galax.highlights").setup(colors, M.config)
-    require("galax.highlights").highlight(highlights, M.config.terminalColors and colors.theme.term or {})
+    require("galax.highlights").highlight(highlights, M.config.term and colors.theme.term or {})
   end
 end
 
@@ -79,7 +79,7 @@ function M.compile()
   for theme, _ in pairs(require("galax.themes")) do
     local colors = require("galax.colors").setup({ theme = theme, colors = M.config.colors })
     local highlights = require("galax.highlights").setup(colors, M.config)
-    require("galax.utils").compile(theme, highlights, M.config.terminalColors and colors.theme.term or {})
+    require("galax.utils").compile(theme, highlights, M.config.term and colors.theme.term or {})
   end
 end
 

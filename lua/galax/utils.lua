@@ -8,7 +8,7 @@ end
 ---@return string theme
 function M.get_theme_from_bg_opt()
   local config = require("galax").config
-  return config.theme[vim.o.background] or config.theme.default
+  return config.theme[vim.o.background] or config.theme
 end
 
 ---@param theme string

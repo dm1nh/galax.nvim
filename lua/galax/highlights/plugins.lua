@@ -3,9 +3,9 @@ local M = {}
 ---@param colors GalaxColors
 ---@param config? GalaxConfig
 function M.setup(colors, config)
-  config = config or require("galax").config
+  ---@diagnostic disable-next-line: unused-local
+  config = config or require("galax").config -- luacheck:ignore
   local theme = colors.theme
-  local palette = colors.palette
   return {
     -- Neovcs
     -- NeovcsBranch = {},
@@ -291,8 +291,7 @@ function M.setup(colors, config)
     MiniFilesBorderModified = { fg = theme.diag.error },
     MiniFilesCursorLine = { bg = theme.ui.bg_p1 },
     MiniFilesDirectory = { fg = theme.ui.accent },
-    -- MiniFilesFile = {},
-    MiniFilesNormal = {},
+    MiniFilesFile = { fg = theme.ui.fg_dim },
     MiniFilesTitle = { fg = theme.ui.float.title },
     MiniFilesTitleFocused = { fg = theme.ui.float.title_focused },
   }
