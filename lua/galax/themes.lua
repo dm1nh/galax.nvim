@@ -102,7 +102,7 @@ return {
         bg_dim = palette.ink1,
         bg_gutter = palette.ink4,
 
-        bg_m3 = palette.ink0,
+        bg_m3 = palette.ink3,
         bg_m2 = palette.ink1,
         bg_m1 = palette.ink3,
         bg = palette.ink2,
