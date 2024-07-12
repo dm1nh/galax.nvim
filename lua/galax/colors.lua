@@ -9,12 +9,12 @@ local palette = {
   ink5 = "#363646",
   ink6 = "#54546d",
   -- foregrounds
-  white0 = "#d5cea3",
-  white1 = "#dcd5ac",
-  white2 = "#e5ddb0",
-  white3 = "#f2ecbc",
-  white4 = "#e7dba0",
-  white5 = "#e4d794",
+  white0 = "#c8c4aa",
+  white1 = "#dcdac9",
+  white2 = "#dedccd",
+  white3 = "#f2f1eb",
+  white4 = "#e1dfd1",
+  white5 = "#eae8de",
   -- comments and gutters
   gray0 = "#404641",
   gray1 = "#686760",
