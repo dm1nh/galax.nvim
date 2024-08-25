@@ -1,4 +1,5 @@
 ---@class PaletteColors
+---@field accent string
 local palette = {
   -- backgrounds
   ink0 = "#16161d",

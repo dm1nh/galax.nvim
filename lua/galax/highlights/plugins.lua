@@ -6,6 +6,8 @@ function M.setup(colors, config)
   ---@diagnostic disable-next-line: unused-local
   config = config or require("galax").config -- luacheck:ignore
   local theme = colors.theme
+  local palette = colors.palette
+
   return {
     -- Neovcs
     -- NeovcsBranch = {},
@@ -89,12 +91,12 @@ function M.setup(colors, config)
     -- NvimWindowSwitchNC = { link = "NvimWindowSwitch" },
 
     -- Dashboard
-    DashboardShortCut = { fg = theme.syn.special1 },
-    DashboardHeader = { fg = theme.vcs.removed },
+    DashboardShortCut = { fg = palette.violet0 },
+    DashboardHeader = { fg = palette.accent },
     DashboardCenter = { fg = theme.syn.identifier },
-    DashboardFooter = { fg = theme.syn.comment },
+    DashboardFooter = { fg = palette.white0 },
     DashboardDesc = { fg = theme.syn.identifier },
-    DashboardKey = { fg = theme.syn.special1 },
+    DashboardKey = { fg = palette.amber0 },
     DashboardIcon = { fg = theme.ui.special },
     -- Notify
     NotifyBackground = { bg = theme.ui.bg },
